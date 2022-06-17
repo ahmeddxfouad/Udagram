@@ -64,7 +64,7 @@ jobs:
           # TODO: Install, build, deploy in both apps
           command: |
             echo "# TODO: Install, build, deploy in both apps"
-       - run: 
+      - run: 
           # TODO: Install the frontend app
           name: Install Front-End Dependencies
           command: |

@@ -1,7 +1,4 @@
 # Hosting a Full-Stack Application
-
-### **You can use you own project completed in previous courses or use the provided Udagram app for completing this final project.**
-
 ---
 
 In this project you will learn how to take a newly developed Full-Stack application built for a retailer and deploy it to a cloud service provider so that it is available to customers. You will use the aws console to start and configure the services the application needs such as a database to store product information and a web server allowing the site to be discovered by potential customers. You will modify your package.json scripts and replace hard coded secrets with environment variables in your code.
@@ -13,15 +10,53 @@ You will then register for a free account on CircleCi and connect your Github ac
 The project will also include writing documentation and runbooks covering the operations of the deployment process. Those runbooks will serve as a way to communicate with future developers and anybody involved in diagnosing outages of the Full-Stack application.
 
 # Udagram
+---
 
 This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
 
+## Udagram Front-end 
+This is the Link for the Front-end of the Udagram App:
 
+<a href="http://elasticbeanstalk-us-east-1-954967991245.s3-website-us-east-1.amazonaws.com/" target="_blank">Udagram</a>
+
+## Circle CI (Last Build)
+![This is an image](/Screenshots/CircleCI.jpg)
+
+## AWS Configuration 
+![This is an image](/Screenshots/Configuration-1.jpg)    
+![This is an image](/Screenshots/Configuration-2.jpg)
+
+## Architecture Diagram
+![This is an image](/Screenshots/Architecture-Diagram.jpg)
+
+## Pipeline
+### Process
+The Pipeline process consist of two main stages:
+```
+* Build :  
+    1- Define the base image can run most needed actions with orbs.
+    2- Install node and checkout code.
+    3- Install Front-End Dependencies.
+    4- Install dependencies in the the backend API.
+    5- Lint the frontend.
+    6- Build the frontend app.
+    7- Build the backend API.
+* Deploy :
+    1- Setup needed for aws, node, elastic beanstalk.
+    2- Install Front-End Dependencies.
+    3- Front-End Build.
+    4- Front-End Deploy.
+    5- Install API Dependencies.
+    6- API Build
+    7- API Deploy.
+```
+### Diagram
+![This is an image](/Screenshots/Pipeline-Diagram.jpg)
 
 ### Dependencies
 
 ```
-- Node v14.15.1 (LTS) or more recent. While older versions can work it is advisable to keep node to latest LTS version
+- Node v14.15.1 (LTS).
 
 - npm 6.14.8 (LTS) or more recent, Yarn can work but was not tested for this project
 
@@ -29,7 +64,9 @@ This application is provided to you as an alternative starter project if you do 
 
 - A RDS database running Postgres.
 
-- A S3 bucket for hosting uploaded pictures.
+- A S3 bucket for Static Web Hosting.
+
+-A S3 bucket for the back-end service documents.
 
 ```
 

@@ -75,6 +75,11 @@ jobs:
           command: |
             npm run frontend:build
       - run: 
+          # TODO: Deploy the frontend app
+          name: Front-End Deploy
+          command: |
+            npm run frontend:deploy
+      - run: 
           # TODO: Install the api app
           name: Install API Dependencies
           command: |
@@ -89,11 +94,7 @@ jobs:
           name: API Deploy
           command: |
             npm run api:deploy
-      - run: 
-          # TODO: Deploy the frontend app
-          name: Front-End Deploy
-          command: |
-            npm run frontend:deploy
+      
             
 workflows:
   udagram:
@@ -109,4 +110,4 @@ workflows:
             - build
       - deploy:
           requires:
-            - hold
+            - build

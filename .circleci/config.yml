@@ -99,10 +99,10 @@ jobs:
 workflows:
   udagram:
     jobs:
-      - build
-        filters:
-          branches:
-            only: main
+      - build:
+          filters:
+            branches:
+              only: main
       - deploy:
           requires:
             - build

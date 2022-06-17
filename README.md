@@ -19,56 +19,22 @@ This is the Link for the Front-end of the Udagram App:
 
 <a href="http://elasticbeanstalk-us-east-1-954967991245.s3-website-us-east-1.amazonaws.com/" target="_blank">Udagram</a>
 
-## Circle CI (Last Build)
-![This is an image](/Screenshots/CircleCI.jpg)
+## Infrastructure
+What services used to build the project? 
+There are 3 services from AWS, and also CircleCI since that is needed for the pipeline infrastructure.
 
-## AWS Configuration 
-![This is an image](/Screenshots/Configuration-1.jpg)    
-![This is an image](/Screenshots/Configuration-2.jpg)
-
-## Architecture Diagram
-![This is an image](/Screenshots/Architecture-Diagram.jpg)
+For more details check [Infrastructure Doc.](/documentation/Infrastructure.md)
 
 ## Pipeline
-### Process
-The Pipeline process consist of two main stages:
-```
-* Build :  
-    1- Define the base image can run most needed actions with orbs.
-    2- Install node and checkout code.
-    3- Install Front-End Dependencies.
-    4- Install dependencies in the the backend API.
-    5- Lint the frontend.
-    6- Build the frontend app.
-    7- Build the backend API.
-* Deploy :
-    1- Setup needed for aws, node, elastic beanstalk.
-    2- Install Front-End Dependencies.
-    3- Front-End Build.
-    4- Front-End Deploy.
-    5- Install API Dependencies.
-    6- API Build
-    7- API Deploy.
-```
-### Diagram
+### Process Diagram
 ![This is an image](/Screenshots/Pipeline-Diagram.jpg)
 
+For more details check [Pipeline Process Doc.](/documentation/Pipeline-process.md)
+
 ### Dependencies
+What modules are our app is depending on?
 
-```
-- Node v14.15.1 (LTS).
-
-- npm 6.14.8 (LTS) or more recent, Yarn can work but was not tested for this project
-
-- AWS CLI v2, v1 can work but was not tested for this project
-
-- A RDS database running Postgres.
-
-- A S3 bucket for Static Web Hosting.
-
--A S3 bucket for the back-end service documents.
-
-```
+For more details check [Dependencies Doc.](/documentation/App-dependencies.md)
 
 ### Installation
 

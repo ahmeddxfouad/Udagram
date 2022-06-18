@@ -4,7 +4,6 @@ cd wwww
 printenv > .env
 eb init --region $AWS_REGION $EP_APP
 eb deploy $EB_ENV
-eb setenv NAME=$NAME
 eb setenv AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
 eb setenv AWS_BUCKET=$AWS_BUCKET
 eb setenv AWS_PROFILE=$AWS_PROFILE

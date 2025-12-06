@@ -13,7 +13,7 @@ jobs:
     steps:
       # install node and checkout code
       - node/install:
-          node-version: '14.15'         
+          node-version: '14.15'
       - checkout
       # Use root level package.json to install dependencies in the frontend app
       - run:
@@ -24,7 +24,7 @@ jobs:
             echo "NPM --version" 
             echo $(npm --version)
             npm run frontend:install
-      # TODO: Install dependencies in the the backend API          
+      # TODO: Install dependencies in the the backend API
       - run:
           name: Install API Dependencies
           command: |
@@ -42,7 +42,7 @@ jobs:
           command: |
             echo "TODO: Build the frontend app"
             npm run frontend:build
-      # TODO: Build the backend API      
+      # TODO: Build the backend API
       - run:
           name: API Build
           command: |
@@ -55,7 +55,7 @@ jobs:
       # more setup needed for aws, node, elastic beanstalk
     steps:
       - node/install:
-          node-version: '14.15' 
+          node-version: '14.15'
       - eb/setup
       - aws-cli/setup
       - checkout
@@ -64,38 +64,41 @@ jobs:
           # TODO: Install, build, deploy in both apps
           command: |
             echo "# TODO: Install, build, deploy in both apps"
-      - run: 
+      - run:
           # TODO: Install the frontend app
           name: Install Front-End Dependencies
           command: |
             npm run frontend:install
-      - run: 
+      - run:
           # TODO: Build the frontend app
           name: Front-End Build
           command: |
             npm run frontend:build
-      - run: 
+      - run:
           # TODO: Deploy the frontend app
           name: Front-End Deploy
           command: |
             npm run frontend:deploy
-      - run: 
+      - run:
           # TODO: Install the api app
           name: Install API Dependencies
           command: |
             npm run api:install
-      - run: 
+      - run:
           # TODO: Build the api app
           name: API Build
           command: |
             npm run api:build
-      - run: 
+      - run:
           # TODO: Deploy the api app
           name: API Deploy
           command: |
             npm run api:deploy
-      
-            
+      - run:
+          name: Show AWS identity
+          command: aws sts get-caller-identity
+
+
 workflows:
   udagram:
     jobs:

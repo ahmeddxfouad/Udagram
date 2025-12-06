@@ -3,6 +3,7 @@ echo $EP_ENV
 cd wwww
 printenv > .env
 eb init --region $AWS_REGION $EP_APP
+eb setenv PORT=$PORT USERNAME=$USERNAME
 eb setenv AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
 eb setenv AWS_BUCKET=$AWS_BUCKET
 eb setenv AWS_PROFILE=$AWS_PROFILE

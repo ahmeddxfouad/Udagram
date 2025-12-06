@@ -7,11 +7,16 @@ export const sequelize = new Sequelize({
   username: config.username,
   password: config.password,
   port: config.dbPort,
-  
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false,
+        },
+    },
     host: config.host,
     dialect: "postgres",
     storage: ":memory:",
- 
+
 });
 
 //const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname')
@@ -26,6 +31,6 @@ export const sequelize = new Sequelize(
 // Option 3: Passing parameters separately (other dialects)
 const sequelize = new Sequelize('database', 'username', 'password', {
   host: 'localhost',
-  dialect: // one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' 
+  dialect: // one of 'mysql' | 'mariadb' | 'postgres' | 'mssql'
 });
 */

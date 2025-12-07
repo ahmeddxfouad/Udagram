@@ -4,7 +4,7 @@
 CircleCI is a continuous integration and continuous delivery platform that can be used to implement DevOps practices.
 
 ### Diagram
-![This is an image](/Screenshots/Pipeline-Diagram.jpg)
+![This is an image](/Screenshots/Pipeline-Diagram.JPG)
 
 ### Process
 The Pipeline process consist of two main stages:
@@ -28,7 +28,7 @@ The Pipeline process consist of two main stages:
 ```
 
 ### Last Build
-![This is an image](/Screenshots/CircleCI.jpg)
+![This is an image](/Screenshots/CircleCI.png)
 ### Enviroment Variable
-![This is an image](/Screenshots/CircleCI-1.jpg)
+![This is an image](/Screenshots/CircleCI-1.png)
 

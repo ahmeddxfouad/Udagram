@@ -14,25 +14,25 @@
 ### Configuration
 #### ElasticBean
 ---
-![This is an image](/Screenshots/Configuration-1.jpg)   
+![This is an image](/Screenshots/Configuration-1.png)   
 --- 
-![This is an image](/Screenshots/Configuration-2.jpg)
+![This is an image](/Screenshots/Configurations-2.png)
 ---
 #### RDS
 ---
-![This is an image](/Screenshots/Configuration-3.jpg)
+![This is an image](/Screenshots/Configurations-3.png)
 #### S3 Bucket
 ---
-![This is an image](/Screenshots/Buckets-1.jpg)
+![This is an image](/Screenshots/Buckets-1.png)
 ---
-![This is an image](/Screenshots/Buckets-2.jpg)
+![This is an image](/Screenshots/Buckets-2.png)
 ---
-![This is an image](/Screenshots/Buckets-3.jpg)
+![This is an image](/Screenshots/Buckets-3.png)
 ---
-![This is an image](/Screenshots/Buckets-4.jpg)
+![This is an image](/Screenshots/Buckets-4.png)
 
 ## Architecture Diagram
-![This is an image](/Screenshots/Architecture-Diagram.jpg)
+![This is an image](/Screenshots/Architecture-Diagram.JPG)
 
 ## Circle CI Pipeline
 ---

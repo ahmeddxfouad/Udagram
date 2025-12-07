@@ -4,10 +4,10 @@ set -e
 echo "EB_APP: $EB_APP"
 echo "EB_ENV: $EB_ENV"
 
-# Go to the backend folder (adjust if needed)
-cd ./www
+# Ensure we’re in the project root (folder that has package.json)
+cd "$(dirname "$0")/.."
 
-# Optional: write all env vars to .env for the app itself
+# (Optional) you can skip this; EB uses real env vars anyway
 printenv > .env
 
 # Initialize Elastic Beanstalk app (non-interactive)
